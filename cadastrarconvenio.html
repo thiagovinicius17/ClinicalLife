@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="./clinicalstyle.css"/>
+    <title>Document</title>
+</head>
+    <body id="Conveniocad">
+        <nav>
+            <div>
+                <h1 id="title">Clinical Life<span><b>+</b></span></h1>
+            </div>
+        </nav>
+        <div>
+            <ul>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Paciente</a>
+                    <div class="dropdown-content">
+                        <a href="./consultpac.html">Consultar</a>
+                        <a href="./cadastrarpaciente.html">Cadastrar</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Médico</a>
+                    <div class="dropdown-content">
+                        <a href="./consultmed.html">Consultar</a>
+                        <a href="./cadastrarmedico.html">Cadastrar</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Convênio</a>
+                    <div class="dropdown-content">
+                        <a href="./consultcon.html">Consultar</a>
+                        <a href="./cadastrarconvenio.html">Cadastrar</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Consulta</a>
+                    <div class="dropdown-content">
+                        <a href="./alterarconsulta.html">Alterar Consulta</a>
+                        <a href="./marcarconsulta.html">Marcar Consulta</a>
+                    </div>
+                </li>
+                <li><a class="config" href="">Perfil</a></li>
+                <li><a class="config" href="./login.html">Sair</a></li>
+
+                <h2 id="hora"></h2>
+                <script>
+                    setInterval(function(){ 
+                        var data = new Date();
+                        var hora = data.getHours();
+                        var minutos = data.getMinutes();
+                        var segundos = data.getSeconds();
+                        document.getElementById("hora").innerHTML = hora + ":" + minutos + ":" + segundos;
+                    },10);    
+                </script>
+
+            </ul>
+        </div>
+        <form>
+            
+            <h2>Fomulário de Cadastro de Convênio</h2>
+            
+            <div>
+                
+                <label for="nome">Nome Empresa:</label><br/>
+                <input type="text" id="nomeemp" name="nome" required><br><br>
+
+                <label for="cnpj">CNPJ:</label><br>
+                <input type="text" id="cnpjemp" name="cnpj" required><br><br>
+
+                <label for="cel"> Telefone:</label><br>
+                <input type="tel" id="telemp" name="tel" required><br><br>
+            
+            </div>
+            <div>
+                
+                <label for="endereco">Endereço:</label><br>
+                <input type="text" id="enderecoaten" name="endereco" required><br><br>
+
+                <label for="numero">Número</label><br>
+                <input type="number" id="numaten" name="numero" required><br><br>
+
+                <label for="bairro">Bairro:</label><br>
+                <input type="text" id="bairroaten" name="bairro" required><br><br>
+            
+            </div>    
+            <div>
+
+                <label for="cidade">Cidade:</label><br>
+                <input type="text" id="cidaten" name="cidade" required><br><br>
+            
+                    <label for="uf">UF:</label><br>
+                <input type="text" id="ufaten" name="uf" required><br><br>
+            
+                <label for="cep">CEP:</label><br>
+                <input type="text" id="cepaten" name="cep"><br><br>
+       
+            </div>
+            <div id="bttconfirm">
+                <input class="btt" type="reset" value="Cancelar Cadastro">
+                <input class="btt" type="submit" value="Confirmar Cadastro">
+            </div>
+        </form>
+        <footer>
+                <h3>#sowing life</h3>
+        </footer>
+    </body>
+</html>

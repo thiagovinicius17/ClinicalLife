@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="./clinicalstyle.css"/>
+    <title>Document</title>
+</head>
+    <body id="main">
+        <nav>
+            <div>
+                <h1 id="title">Clinical Life<span><b>+</b></span></h1>
+            </div>
+        </nav>
+        <div>
+            <ul>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Paciente</a>
+                    <div class="dropdown-content">
+                        <a href="./consultpac.html">Consultar</a>
+                        <a href="./cadastrarpaciente.html">Cadastrar</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Médico</a>
+                    <div class="dropdown-content">
+                        <a href="./consultmed.html">Consultar</a>
+                        <a href="./cadastrarmedico.html">Cadastrar</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Convênio</a>
+                    <div class="dropdown-content">
+                        <a href="./consultcon.html">Consultar</a>
+                        <a href="./cadastrarconvenio.html">Cadastrar</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Consulta</a>
+                    <div class="dropdown-content">
+                        <a href="./alterarconsulta.html">Alterar Consulta</a>
+                        <a href="./marcarconsulta.html">Marcar Consulta</a>
+                    </div>
+                </li>
+                <li><a class="config" href="">Perfil</a></li>
+                <li><a class="config" href="./login.html">Sair</a></li>
+
+                <h2 id="hora"></h2>
+                <script>
+                    setInterval(function(){ 
+                        var data = new Date();
+                        var hora = data.getHours();
+                        var minutos = data.getMinutes();
+                        var segundos = data.getSeconds();
+                        document.getElementById("hora").innerHTML = hora + ":" + minutos + ":" + segundos;
+                    },10);    
+                </script>
+            </ul>
+            <nav class="pesq">
+                <input type="text" id="search" nome="nome">
+                <button  id= "btts"class="btt" type="submit" value="search"><img src="./img/icons8-pesquisar-50.png" width="15" height="15"></button>
+                <button class="btt" onclick="removeEventListener">Deletar Consulta</button>
+                <button class="btt" id="addpac"><a href="./marcarconsulta.html">Adicionar Consulta</a></button>
+                <ul>
+                    <li value="./cadastrarpaciente"> </li>
+                </ul>
+            </nav>
+            <div>
+                <table>   
+                    <tr>
+                        <th>Dia 29/04/2023</th>
+                    </tr>
+                    <tr>
+                    <th>Horário</th>
+                    <th>Paciente</th>
+                    <th>Médico</th>
+                    </tr>
+                    <tr>
+                        <td>10:00</td>
+                        <td>Paciente 01</td>
+                        <td>Medico 05</td>
+                    </tr>
+                    <tr>
+                        <td>11:15</td>
+                        <td>Paciente 04</td>
+                        <td>Medico 05</td>
+                    </tr>
+                    <tr>
+                        <td>11:20</td>
+                        <td>Paciente 03</td>
+                        <td>Medico 02</td>
+                    </tr>
+                    <tr>
+                        <td>13:00</td>
+                        <td>Paciente 02</td>
+                        <td>Medico 03</td>
+                    </tr>
+                    <tr>
+                        <td>13:20</td>
+                        <td>Paciente 05</td>
+                        <td>Medico 04</td>
+                    </tr>
+                </table>    
+            </div>
+        </div>
+        <footer>
+            <h3>#sowing life</h3>
+        </footer>
+    </body>
+
+</html>

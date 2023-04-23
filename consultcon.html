@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="./clinicalstyle.css"/>
+    <title>Document</title>
+</head>
+    <body id="Conveniocons">
+        <nav>
+            <div>
+                <h1 id="title">Clinical Life<span><b>+</b></span></h1>
+            </div>
+        </nav>
+        <div>
+            <ul>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Paciente</a>
+                    <div class="dropdown-content">
+                        <a href="./consultpac.html">Consultar</a>
+                        <a href="./cadastrarpaciente.html">Cadastrar</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Médico</a>
+                    <div class="dropdown-content">
+                        <a href="./consultmed.html">Consultar</a>
+                        <a href="./cadastrarmedico.html">Cadastrar</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Convênio</a>
+                    <div class="dropdown-content">
+                        <a href="./consultcon.html">Consultar</a>
+                        <a href="./cadastrarconvenio.html">Cadastrar</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Consulta</a>
+                    <div class="dropdown-content">
+                        <a href="./alterarconsulta.html">Alterar Consulta</a>
+                        <a href="./marcarconsulta.html">Marcar Consulta</a>
+                    </div>
+                </li>
+                <li><a class="config" href="">Perfil</a></li>
+                <li><a class="config" href="./login.html">Sair</a></li>
+
+                <h2 id="hora"></h2>
+                <script>
+                    setInterval(function(){ 
+                        var data = new Date();
+                        var hora = data.getHours();
+                        var minutos = data.getMinutes();
+                        var segundos = data.getSeconds();
+                        document.getElementById("hora").innerHTML = hora + ":" + minutos + ":" + segundos;
+                    },10);    
+                </script>
+
+            </ul>
+            <nav class="pesq">
+                <input type="text" id="search" nome="nome">
+                <button  id= "btts"class="btt" type="submit" value="search"><img src="./img/icons8-pesquisar-50.png" width="15" height="15"></button>
+                <button class="btt" onclick="removeEventListener">Deletar Convênio</button>
+                <button class="btt" id="addpac"><a href="./cadastrarconvenio.html">Adicionar Convênio</a></button>
+                <ul>
+                    <li value="./cadastrarpaciente"> </li>
+                </ul>
+            </nav>
+            <div>
+                <table>    
+                    <tr>
+                    <th>CNPJ</th>
+                    <th>Nome da empresa</th>
+                    <th>Telefone</th>
+                    </tr>
+                    <tr>
+                        <td>13.474.968/0001-00</td>
+                        <td>Empresa 01</td>
+                        <td>(51) 3898-6054</td>
+                    </tr>
+                    <tr>
+                        <td>13.474.968/0001-00</td>
+                        <td>Empresa 02</td>
+                        <td>(33) 3466-1164</td>
+                    </tr>
+                    <tr>
+                        <td>08.688.764/0001-23</td>
+                        <td>Empresa 03</td>
+                        <td>(33) 2229-7633</td>
+                    </tr>
+                    <tr>
+                        <td>38.677.694/0001-79</td>
+                        <td>Empresa 04</td>
+                        <td>(31) 3261-2574</td>
+                    </tr>
+                    <tr>
+                        <td>95.185.736/0001-98</td>
+                        <td>Empresa 05</td>
+                        <td>(51) 3898-6054</td>
+                    </tr>
+                </table>    
+            </div>
+        </div>
+    </div>
+</form>
+<footer>
+        <h3>#sowing life</h3>
+</footer>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="./clinicalstyle.css"/>
+    <title>Document</title>
+</head>
+    <body id="Medicocons">
+        <nav>
+            <div>
+                <h1 id="title">Clinical Life<span><b>+</b></span></h1>
+            </div>
+        </nav>
+        <div>
+            <ul>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Paciente</a>
+                    <div class="dropdown-content">
+                        <a href="./consultpac.html">Consultar</a>
+                        <a href="./cadastrarpaciente.html">Cadastrar</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Médico</a>
+                    <div class="dropdown-content">
+                        <a href="./consultmed.html">Consultar</a>
+                        <a href="./cadastrarmedico.html">Cadastrar</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Convênio</a>
+                    <div class="dropdown-content">
+                        <a href="./consultcon.html">Consultar</a>
+                        <a href="./cadastrarconvenio.html">Cadastrar</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Consulta</a>
+                    <div class="dropdown-content">
+                        <a href="./alterarconsulta.html">Alterar Consulta</a>
+                        <a href="./marcarconsulta.html">Marcar Consulta</a>
+                    </div>
+                </li>
+                <li><a class="config" href="">Perfil</a></li>
+                <li><a class="config" href="./login.html">Sair</a></li>
+
+                <h2 id="hora"></h2>
+                <script>
+                    setInterval(function(){ 
+                        var data = new Date();
+                        var hora = data.getHours();
+                        var minutos = data.getMinutes();
+                        var segundos = data.getSeconds();
+                        document.getElementById("hora").innerHTML = hora + ":" + minutos + ":" + segundos;
+                    },10);    
+                </script>
+            </ul>
+            <nav class="pesq">
+                <input type="text" id="search" nome="nome">
+                <button class="btt" type="submit" value="search"><img src="./img/icons8-pesquisar-50.png" width="15" height="15"></button>
+                <button class="btt" onclick="removeEventListener">Deletar Médico</button>
+                <button class="btt" id="addpac"><a href="./cadastrarmedico.html">Adicionar Médico</a></button>
+                <ul>
+                    <li value="./cadastrarpaciente"> </li>
+                </ul>
+            </nav>
+            <div>
+                <table>    
+                    <tr>
+                    <th>CPF</th>
+                    <th>Nome do médico</th>
+                    <th>Especialidade</th>
+                    </tr>
+                    <tr>
+                        <td>80131625675</td>
+                        <td>Médico 01</td>
+                        <td>Ortopedista</td>
+                    </tr>
+                    <tr>
+                        <td>42763696651</td>
+                        <td>Médico 02</td>
+                        <td>Oftalmologista</td>
+                    </tr>
+                    <tr>
+                        <td>25085572696</td>
+                        <td>Médico 03</td>
+                        <td>Pediatra</td>
+                    </tr>
+                    <tr>
+                        <td>52507895608</td>
+                        <td>Médico 04</td>
+                        <td>Cardiologista</td>
+                    </tr>
+                    <tr>
+                        <td>65138646664</td>
+                        <td>Médico 05</td>
+                        <td>Mastologista</td>
+                    </tr>
+                </table>    
+            </div>
+        </div>
+    </div>
+</form>
+<footer>
+        <h3>#sowing life</h3>
+</footer>
+</body>
+</html>

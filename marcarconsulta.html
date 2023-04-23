@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel ="stylesheet" href="./clinicalstyle.css"/>
+    <title>Document</title>
+</head>
+    <body id="main">
+        <nav>
+            <div>
+                <h1 id="title">Clinical Life<span><b>+</b></span></h1>
+            </div>
+        </nav>
+        <div>
+            <ul>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Paciente</a>
+                    <div class="dropdown-content">
+                        <a href="./consultpac.html">Consultar</a>
+                        <a href="./cadastrarpaciente.html">Cadastrar</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Médico</a>
+                    <div class="dropdown-content">
+                        <a href="./consultmed.html">Consultar</a>
+                        <a href="./cadastrarmedico.html">Cadastrar</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Convênio</a>
+                    <div class="dropdown-content">
+                        <a href="./consultcon.html">Consultar</a>
+                        <a href="./cadastrarconvenio.html">Cadastrar</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">Consulta</a>
+                    <div class="dropdown-content">
+                        <a href="./alterarconsulta.html">Alterar Consulta</a>
+                        <a href="./marcarconsulta.html">Marcar Consulta</a>
+                    </div>
+                </li>
+                <li><a class="config" href="">Perfil</a></li>
+                <li><a class="config" href="./login.html">Sair</a></li>
+
+                <h2 id="hora"></h2>
+                <script>
+                    setInterval(function(){ 
+                        var data = new Date();
+                        var hora = data.getHours();
+                        var minutos = data.getMinutes();
+                        var segundos = data.getSeconds();
+                        document.getElementById("hora").innerHTML = hora + ":" + minutos + ":" + segundos;
+                    },10);    
+                </script>
+
+            </ul>
+        </div>
+        <div id="Consulta">
+            <div>
+                <form>
+                    <h2>Fomulário de Consulta</h2>
+                    
+                    <label for="nome">Nome:</label><br/>
+                    <input class="text" type="text" id="nome" name="nome" required><br><br>
+            
+                    <label for="telefone">Telefone:</label><br/>
+                    <input class="text" type="tel" id="telefone" name="telefone" required><br><br>
+            
+                    <label for="data">Data da consulta:</label><br/>
+                    <input type="date" id="data" name="data" required><br><br>
+            
+                    <label for="hora">Hora da consulta:</label><br/>
+                    <input type="time" id="hora" name="hora" required><br><br>
+            
+                    <label for="data">Data retorno da consulta</label></br>
+                    <input type="date" id="datareturn" name="data" required><br><br>
+            
+            
+                    <label for="medico">Médico:</label>
+                    <select id="medico" name="medico">
+                    <option value="Dr. Marcelo Holanda">Dr. Marcelo Holanda</option>
+                    <option value="Dr. Luis Fernando">Dr. Luiz Fernando</option>
+                    <option value="Dr. Pedro Alencar">Dr. Pedro Alencar</option>
+                    <option value="Dr. Veloso">Dr. Veloso</option>
+                    </select><br><br>
+            
+                    <label for="especialidade">Especialidade:</label>
+                    <select id="especialidade" name="especialidade">
+                    <option value="Cardiologia">Cardiologia</option>
+                    <option value="Dermatologia">Dermatologia</option>
+                    <option value="Ginecologia">Ginecologia</option>
+                    <option value="Oftalmologia">Oftalmologia</option>
+                    <option value="Ortopedia">Ortopedia</option>
+                    </select><br><br>
+            
+                    <label for="observacoes">Observações:</label><br>
+                    <textarea id="observacoes" name="observacoes" rows="4" cols="50"></textarea><br><br>
+            
+                    <input class="btt" type="reset" value="Cancelar Consulta">
+                    <input class="btt" type="submit" value="Agendar consulta">
+                </form>
+            </div>    
+        </div>
+        <footer>
+            <h3>#sowing life</h3>
+        </footer>
+    </body>
+
+</html>
